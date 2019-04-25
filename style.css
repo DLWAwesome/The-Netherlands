@@ -1,6 +1,6 @@
 body {
-  background: url(Flag_of_the_Netherlands.svg) repeat-x;
-  background-size: 100% 100%
+  background: url(Flag_of_the_Netherlands.svg);
+  background-size: 100% 100%;
 }
 h1 {
   text-align: center;
