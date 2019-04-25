@@ -1,5 +1,5 @@
 body {
-  background: url(Flag_of_the_Netherlands.svg);
+  background: url(Flag_of_the_Netherlands.svg) repeat-x;
   background-size: 100% 100%;
 }
 h1 {
