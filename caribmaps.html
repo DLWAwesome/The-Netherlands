@@ -1,1 +1,83 @@
-
+<Doctype=HTML>
+<html>
+<head>
+  <title>The Netherlands-Physical Geography</title>
+  <link rel="stylesheet" href="style.css" />
+ <style>
+.collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+.active, .collapsible:hover {
+  background-color: #555;
+}
+.collapsible:after {
+  content: '\002B';
+  color: white;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+.active:after {
+  content: "\2212";
+}
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #f1f1f1;
+}
+</style>
+</head>
+<body>
+  <a class="button" href="index.html">HOME</a> <a class="button" href="about.html">ABOUT</a>  <a class="button" href="history.html">HISTORY</a>  <a class="button" href="phys.html">PHYSICAL GEO</a>  <a class="button" href="hum.html">HUMAN GEO</a>  <a class="button" href="facts.html">FACTS</a>
+<h1>Articles</h1>
+<button class="collapsible">Northern Regions</button>
+<div class="content">
+  <p>Frisian Islands</p>
+  <p>North Sea</p>
+  <p>Ijsselmeer</p>
+</div>
+<button class="collapsible">Southern Regions</button>
+<div class="content">
+  <p>Low Netherlands</p>
+  <p>High Netherlands</p>
+  <p>Vaalserberg</p>
+  <p>Zuidplaspolder</p>
+  <p>Caribbean Colonies</p>
+</div>
+<button class="collapsible">Rivers</button>
+<div class="content">
+  <p>Rhine</p>
+  <p>Maas</p>
+  <p>Sheldt</p>
+</div>
+<button class="collapsible">Climate</button>
+<div class="content">
+  <p>Climate and Weather</p>
+</div>
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+</body>
+</html>
