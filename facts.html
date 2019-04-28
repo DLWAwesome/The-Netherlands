@@ -1,0 +1,70 @@
+<Doctype=HTML>
+<html>
+<head>
+  <title>The Netherlands-Facts</title>
+  <link rel="stylesheet" href="style.css" />
+ <style>
+.collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+.active, .collapsible:hover {
+  background-color: #555;
+}
+.collapsible:after {
+  content: '\002B';
+  color: white;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+.active:after {
+  content: "\2212";
+}
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #f1f1f1;
+}
+</style>
+</head>
+<body>
+  <a class="button" href="index.html">HOME</a> <a class="button" href="about.html">ABOUT</a>  <a class="button" href="history.html">HISTORY</a>  <a class="button" href="phys.html">PHYSICAL GEO</a>  <a class="button" href="hum.html">HUMAN GEO</a>  <a class="button" href="facts.html">FACTS</a>
+<h1>Facts</h1>
+<button class="collapsible">Polders</button>
+<div class="content">
+  <p>Over half the Netherlnds is built on polders.</p>
+  <p>The water pumps keeping the polders dry were once windmills, but they are now electric.</p>
+  <img src="windmill.gif" width="300px">
+</div>
+<button class="collapsible">Food and Drink</button>
+<div class="content">
+  <p>The Netherlands is the world's largest beer export.</p>
+  <p>Dutch people really like their coffee. They drink 3.2 cups a day!</p>
+</div>
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+</body>
+</html>
